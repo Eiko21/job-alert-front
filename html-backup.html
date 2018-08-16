@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="jquery-3.3.1.min.js"></script>
+	<style>
+		body {
+			/*background-color: #eeebe4;*/
+			background-color: #f4f3f2;
+		}
+		button {
+			/*height: 30px;
+			width: 30px;*/
+			outline: none;
+			border: none;
+			border-radius: 40px;
+			padding: 7px 0;
+			color: #ffffff;
+		}
+		input {
+			/*margin: 10px 0;*/
+			padding: 7px;
+			border: none;
+			border-radius: 2px;
+		}
+		.inputDiv {
+			margin-bottom: 14px;
+		}
+		.wrapper {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+			padding: 30px;
+		}
+		#login {
+			background-color: #ca7900;
+			margin-bottom: 14px;
+		}
+		#login:hover {
+			background-color: #be6600;
+		}
+		#track {
+			background-color: #089933;
+		}
+		#track:hover {
+			background-color: #008b51;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="inputDiv"><input type="email" name="email" id="email" placeholder="email"></div>
+		<div class="inputDiv"><input type="password" name="password" id="password" placeholder="password"></div>
+		<button id="login">Login</button>
+		<button id="track">Track</button>
+	</div>
+
+	<script src="popup.js"></script>
+</body>
+
+</html>
