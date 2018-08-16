@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			$("#includedContent").load("subs.html");
+		});
+	</script>
 	<style>
 		body {
-			/*background-color: #eeebe4;*/
-			/*background-color: #f4f3f2;*/
-			background-color: #f2efee;
+			/*background-color: #f2efee;*/
+			background-color: whitesmoke;
+			text-align: center;
 		}
-		body * {
-			font-weight: 600;
-		}
-		button {
-			/*height: 30px;
-			width: 30px;*/
-			outline: none;
-			border: none;
-			border-radius: 40px;
-			padding: 7px 0;
-			color: #ffffff;
-		}
+		body * {font-weight: 600;}
+		.title{font-family: 'Times New Roman', Times, serif;font-size: 30px;}
 		input {
 			/*margin: 10px 0;*/
 			padding: 7px;
@@ -28,21 +22,19 @@
 			border-radius: 20px;
 			text-align: center;
 			color: #00000095;
+			border: 1px solid #000000e8;
 		}
-		input::placeholder {
-			color: #00000050;
-		}
-		.inputDiv {
-			margin-bottom: 14px;
-		}
+		input::placeholder {color: #00000050;}
+		.inputDiv {margin-bottom: 14px;}
 		.wrapper {
 			display: flex;
 			justify-content: center;
 			align-content: center;
 			flex-direction: column;
-			padding: 30px;
+			padding: 20px;
+			border-top: 0.5px solid #dadada;
 		}
-		#login {
+		/*#login {
 			background-color: #ca790000;
 			margin-bottom: 14px;
 			border: 3px solid #ca7900;
@@ -51,30 +43,28 @@
 		#login:hover {
 			background-color: #be6600;
 			color: #ffffff;
-		}
-		#track {
-			background-color: #08993300;
-			border: 3px solid #089933;
-			color: #089933;
-		}
-		#track:hover {
-			background-color: #008b51;
-			color: #ffffff;
-		}
+		}*/
+		.account{margin-top: 17px;padding-top: 7px;border-top: 0.5px solid #dadada;}
+		.link-register{text-decoration:none;color: #3e65ff;}
+		.link-register:hover{color: #60a917}
 	</style>
 </head>
 
 <body>
-	<div class="wrapper">
+	<h1 class="title">Job Alert</h1>
+	<div class="wrapper w3-animate-zoom">
+		<!-- -->
 		<div class="inputDiv"><input type="email" name="email" id="email" placeholder="email"></div>
 		<div class="inputDiv"><input type="password" name="password" id="password" placeholder="password"></div>
 		<div class="inputDiv"><input type="password" name="password2" id="password2" placeholder="repeat password"></div>
-		<button id="login">Log in</button>
-		<div>Don't have an account?<a href="#">Register here</a></div>
-		<button id="track">Track</button>
+		<button type="button" class="w3-button w3-white w3-border w3-border-lime w3-round-large" onclick="subs.html">Log in</button>
+		<div class="account">Don't have an account?<a href="#" class="link-register ">Register here</a></div>
 	</div>
-
-	<script src="popup.js"></script>
 </body>
 
 </html>
+<script src="popup.js"></script>
+<script src="drop-list.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
