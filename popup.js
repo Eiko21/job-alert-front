@@ -19,13 +19,7 @@ function track() {
     const fullUrl = tabs[0].url;
     const converted = new URL(fullUrl);
     
-    let filters = [
-      /\b.*(?=(\.com))/,
-      /\b.*(?=(\.org))/,
-      /\b.*(?=(\.es))/,
-      /\b.*(?=(\.io))/,
-      /\b.*(?=(\.net))/
-    ];
+    let filters = [ /\b.*(?=(\.))/];
 
     let domain = null;
     // Cortar hasta los posibles filtros (.com, .es, etc)

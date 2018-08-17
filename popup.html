@@ -2,6 +2,7 @@
 <html>
 <head>
 	<script src="jquery-3.3.1.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<style>
 		body {
 			/*background-color: #f2efee;*/
@@ -48,17 +49,33 @@
 <body>
 	<h1 class="title">Job Alert</h1>
 	<div class="wrapper w3-animate-zoom">
-		<!-- -->
-		<div class="inputDiv"><input type="email" name="email" id="email" placeholder="email"></div>
-		<div class="inputDiv"><input type="password" name="password" id="password" placeholder="password"></div>
-		<a class="w3-button w3-white w3-border w3-border-lime w3-round-large" href="subs.html">Log in</a>
-		<div class="account">Don't have an account?<a href="subs.html" class="link-register ">Register here</a></div>
+		<div class="inputDiv"><input type="email" name="email" id="email" placeholder="Email"></div>
+		<div class="inputDiv"><input type="password" name="password" id="password" placeholder="Password"><br></div>
+		<a id="login" class="w3-button w3-white w3-border w3-border-lime w3-round-large" >Log in</a>
+		<div class="account">You don't have an account?<a href="registro.html" class="link-register">Sign up</a></div>
 	</div>
+	<script>
+		function login(){
+			let email = document.getElementById("email");
+			let pass = document.getElementById("password");
+			axios({
+				  method: 'post',
+				  url: 'http://localhost:3333/api/sign',
+				  data: {
+					email: email,
+					password: pass
+				}
+			});
+		}
+		$("#login").on("click", function(){
+			login();
+		})
+	</script>
 </body>
 
 </html>
-<script src="popup.js"></script>
 <script src="drop-list.js"></script>
+<script src="/back/job-alert-eoi/api/users/index.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

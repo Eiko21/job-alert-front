@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="jquery-3.3.1.min.js"></script>
     <style>
-        #track {background-color: #08993300;border: 3px solid #089933;color: #089933;}
-		#track:hover {background-color: #008b51;color: #ffffff;}
+        body {background-color: whitesmoke;text-align: center;}
+		body * {font-weight: 600;}
+		.title{font-family: 'Times New Roman', Times, serif;font-size: 30px;}
+        button {margin-top: 17px;}
+        .wrapper{
+            display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+			padding: 5px 20px;
+			border-top: 0.5px solid #dadada;
+        }
     </style>
 </head>
 <body>
-    <button id="track">Suscribirse a la oferta</button>
+    <h1 class="title">Job Alert</h1>
+    <div class="wrapper">
+        <!-- <p id="usuario">User: </p> -->
+        <button type="button" class="w3-button w3-white w3-border-green w3-border w3-round-large" id="track">Subscribe to this offer</button>
+    </div>
 </body>
 </html>
+
 <script src="popup.js"></script>
-<script src="drop-list.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js">
